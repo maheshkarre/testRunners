@@ -19,3 +19,11 @@ jobs:
         run: |         
           sudo apt-get update
           echo This demo file shows a  
+          
+      - name: Check Device is TTY or Not
+        run: |
+          if [ -t 1 ]; then
+            echo "Output is a TTY"
+          else
+            echo "Output is not a TTY"
+          fi
