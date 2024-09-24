@@ -22,8 +22,8 @@ jobs:
           
       - name: Check Device is TTY or Not
         run: |
-          if [ -t 1 ]; then
-            echo "Output is a TTY"
+          if [ -t 0 ]; then
+            echo "Input is a TTY"
           else
-            echo "Output is not a TTY"
+            echo "Input is not a TTY"
           fi
